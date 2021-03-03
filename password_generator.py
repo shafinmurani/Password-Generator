@@ -6,6 +6,9 @@ try :
     length = int(input('Input the length of the password : '))
 except NameError :
        print("Please Supply a valid integer")
+except KeyboardInterrupt :
+    print("\nUser interrupted the program \nExitting...")
+
 chars = str(string.ascii_letters + string.digits + string.punctuation)
 
 try :
@@ -13,3 +16,5 @@ try :
     print(password)
 except NameError:
     print('')
+except KeyboardInterrupt :
+    print("\nUser interrupted the program \nExitting...")
