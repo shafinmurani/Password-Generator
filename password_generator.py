@@ -7,17 +7,17 @@ except NameError :
        print("Please Supply a valid integer")
 except KeyboardInterrupt :
     print("\nUser interrupted the program \nExitting...")
+chars = str(string.ascii_letters + string.digits + string.punctuation)
 if length == '':
     length = 20
-elif length == ' ' :
+elif length == ' ':
     length = 20
-chars = str(string.ascii_letters + string.digits + string.punctuation)
 try : 
-    int(length)
+    intlen = int(length)
 except ValueError:
     print("Please Supply a valid integer")
 try :
-    password = ''.join(random.choice(chars) for _ in range(length))
+    password = ''.join(random.choice(chars) for _ in range(intlen))
     print(password)
 except NameError:
     print('')
